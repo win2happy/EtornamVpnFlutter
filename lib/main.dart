@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Etornam VPN',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       theme: customLightTheme(context),
       darkTheme: customDarkTheme(context),
       themeMode: ThemeMode.system,
