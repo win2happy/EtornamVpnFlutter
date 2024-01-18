@@ -34,8 +34,8 @@ jobs:
     - run: dart --version
     - run: flutter --version
     - run: flutter pub get
-    # - run: flutter build apk  --build-name=test-1.0 --build-number=1
-    - run: flutter build apk
+    - run: flutter build apk  --build-name=evpn-1.0 --build-number=1
+    # - run: flutter build apk
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
