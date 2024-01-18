@@ -48,6 +48,14 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def version = variant.versionName // 版本号
+                    def buildType = variant.name // 包类型，debug 还是 release
+                    def createTime = new Date().format('yyyy_MM_dd_HH_mm_ss') // 打包时间 2021_09_25_16_45_52
+                    outputFileName = "eVPN_${buildType}_${version}_${createTime}.apk"
+                }
+            }
             // ndk {
             //     if (!project.hasProperty('target-platform')) {
             //         abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64'
@@ -65,15 +73,6 @@ android {
             //     }
             // }
         }
-    }
-
-    applicationVariants.all { variant ->
-       variant.outputs.all {
-           def version = variant.versionName // 版本号
-           def buildType = variant.name // 包类型，debug 还是 release
-           def createTime = new Date().format('yyyy_MM_dd_HH_mm_ss') // 打包时间 2021_09_25_16_45_52
-           outputFileName = "eVPN_${buildType}_${version}_${createTime}.apk"
-       }
     }
 }
 
