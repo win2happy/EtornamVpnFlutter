@@ -28,7 +28,7 @@ jobs:
     - uses: actions/setup-java@v1
       with:
       # Please see https://imuer8.blogspot.com/2024/01/etornamvpnflutter.html
-        java-version: ${{ evpn.EVPN_JAVA_VERSION }}
+        java-version: ${{ envs.evpn.EVPN_JAVA_VERSION }}
     - uses: subosito/flutter-action@v2
       with:
       # Please see https://imuer8.blogspot.com/2024/01/etornamvpnflutter.html
