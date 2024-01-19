@@ -27,9 +27,11 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-java@v1
       with:
+      # Please see https://imuer8.blogspot.com/2024/01/etornamvpnflutter.html
         java-version: ${{ secrets.EVPN_JAVA_VERSION }}
     - uses: subosito/flutter-action@v2
       with:
+      # Please see https://imuer8.blogspot.com/2024/01/etornamvpnflutter.html
         flutter-version: ${{ secrets.EVPN_FLUTTER_VERSION }}
     - run: dart --version
     - run: flutter --version
