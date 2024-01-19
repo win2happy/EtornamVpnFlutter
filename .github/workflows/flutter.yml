@@ -28,11 +28,11 @@ jobs:
     - uses: actions/setup-java@v1
       with:
       # Please see https://imuer8.blogspot.com/2024/01/etornamvpnflutter.html
-        java-version: ${{ secrets.evpn.EVPN_JAVA_VERSION }}
+        java-version: ${{ vars.EVPN_JAVA_VERSION }}
     - uses: subosito/flutter-action@v2
       with:
       # Please see https://imuer8.blogspot.com/2024/01/etornamvpnflutter.html
-        flutter-version: ${{ secrets.evpn.EVPN_FLUTTER_VERSION }}
+        flutter-version: ${{ vars.EVPN_FLUTTER_VERSION }}
     - run: dart --version
     - run: flutter --version
     - run: flutter pub get
